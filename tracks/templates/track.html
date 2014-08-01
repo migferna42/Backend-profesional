@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Track {{titulo}}</title>
+</head>
+<body>
+	<section>
+		<ul>
+			{% for track in tracks %}
+			<li>
+				<a href="{{track.get_absolute_url}}"> {{track.title}} </a>
+			</li>
+			{% endfor %}
+		</ul>
+		<p>
+			Title: {{track.title}}
+		</p>
+		<p>
+			Order: {{track.order}}
+		</p>
+		<p>
+			File: {{track.track_file}}
+		</p>
+		<p>
+			Album: {{track.album}}
+		</p>
+		<p>
+			Artist: {{track.artist}}
+		</p>
+		<p>
+			Biography: {{track.artist.biography}}
+		</p>
+	</section>
+</body>
+</html>
